@@ -1,7 +1,7 @@
 FROM python:3.11-slim-bullseye
 WORKDIR /app
 RUN apt-get update && apt-get install -y git
-RUN git clone https://github.com/mhdzumair/mediaflow-proxy.git .
+RUN git clone https://github.com/mhdzumair/mediaflow-proxy.git 
 RUN cd mediaflow-proxy
 RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8888
