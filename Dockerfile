@@ -6,5 +6,5 @@ EXPOSE 8888
 RUN pip install uvicorn
 #CMD ["mediaflow-proxy"]
 #RUN uv run uvicorn mediaflow_proxy.main:app --host 0.0.0.0 --port 8888 --workers 4 --forwarded-allow-ips "*"
-CMD ["uvicorn", "run:main_app", "--host", "0.0.0.0", "--port", "8888", "--workers", "4"]
+CMD ["uvicorn", "mediaflow_proxy.main:app", "--host", "0.0.0.0", "--port", "8888", "--workers", "4"]
 
